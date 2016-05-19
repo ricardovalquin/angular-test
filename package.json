@@ -1,0 +1,19 @@
+{
+  "name": "angular-test",
+  "version": "1.0.0",
+  "description": "an angular application test using Highcharts for the graphics and angular mocks for emulate the services responses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardovalquin/angular-test.git"
+  },
+  "author": "ricardovalquin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardovalquin/angular-test/issues"
+  },
+  "homepage": "https://github.com/ricardovalquin/angular-test#readme"
+}
