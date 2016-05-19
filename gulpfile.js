@@ -2,7 +2,16 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var wiredep = require('wiredep').stream;
+var gutil = require('gulp-util');
+var eslint = require('gulp-eslint');
+var $ = require('gulp-load-plugins')();
+var friendlyFormatter = require("eslint-friendly-formatter");
 var reload = browserSync.reload;
+
+
+var eslintErrorOccured   = false;
+
+var jsCustomSRC = ['./**/*.js', '!node_modules/**/*.js'];
 
 gulp.task('injectAppFiles', function(){
   var sources = gulp.src(['./assets/css/**/*.css'], {read: false});
@@ -30,41 +39,54 @@ gulp.task('styles', function(){
     //notify
 });
 
+gulp.task('lint', function () {
+  return gulp.src(jsCustomSRC)
+    // eslint() attaches the lint output to the "eslint" property
+    // of the file object so it can be used by other modules.
+    .pipe(eslint())
+    .pipe($.plumber({
+      errorHandler: function (err) {
+        eslintErrorOccured = true;
+        $.notify.onError({
+          title:    "Eslint Error",
+          message:  "Error: <%= error.message %>"
+        })(err);
+        this.emit('end');
+      }
+    }))
+    .pipe(eslint.results(function (results) {
+      // Called once for all ESLint results.
+      console.log('Total Results: ' + results.length);
+      console.log('Total Warnings: ' + results.warningCount);
+      console.log('Total Errors: ' + results.errorCount);
 
-// gulp.task('scripts', () =>{
-//   return gulp.src('./**/*.js')
-//     .pipe($.plumber())
-//     .pipe($.sourcemaps.init())
-//     .pipe($.babel())
-//     .pipe($.sourcemaps.write('.'))
-//     .pipe(gulp.dest('.tmp/scripts'))
-//     .pipe(reload({stream: true}));
-// });
+      if(results.errorCount){
+        throw new gutil.PluginError({
+          plugin: eslint,
+          message: 'Error: Please check your js files!'
+        });
+      }
 
-// gulp.task('images', () => {
-//   return gulp.src('app/assets/img/**/*')
-//     .pipe($.cache($.imagemin({
-//       progressive: true,
-//       interlaced: true,
-//       // don't remove IDs from SVGs, they are often used
-//       // as hooks for embedding and styling
-//       svgoPlugins: [{cleanupIDs: false}]
-//     })))
-//     .pipe(gulp.dest('dist/images'));
-// });
+    }))
 
-// gulp.task('fonts', () => {
-//   return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
-//     .concat('app/assets/fonts/**/*'))
-//     .pipe(gulp.dest('.tmp/fonts'))
-//     .pipe(gulp.dest('dist/fonts'));
-// });
+    // eslint.format() outputs the lint results to the console.
+    // Alternatively use eslint.formatEach() (see Docs).
+    .pipe(eslint.format(friendlyFormatter))
+    // To have the process exit with an error code (1) on
+    // lint error, return the stream and pipe to failAfterError last.
+    .pipe(eslint.failAfterError());
+});
+
+gulp.task('js-watch', ['lint'], browserSync.reload);
+
+
 
 gulp.task('serve', ['styles', 'injectAppFiles'], function(){
   browserSync.init({
       server: './'
   });
   gulp.watch('./assets/css/**/*.scss', ['styles']);
+  gulp.watch("./**/*.js", ['js-watch']);
   gulp.watch('./**/*.html').on('change', reload);
 });
 
