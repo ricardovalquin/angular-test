@@ -1,0 +1,146 @@
+.row1 {
+  display: inline-block;
+  width: 100%;
+
+  .company {
+    width: 35%;
+    margin: 10px;
+    display: inline-block;
+    background-color: white;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    height: 200px;
+    vertical-align: top;
+
+    .company-logo {
+      display: inline-block;
+      box-sizing: border-box;
+    }
+
+    .company-info {
+      display: inline-block;
+      box-sizing: border-box;
+      font-size: 22px;
+    }
+  }
+
+  .financial-summary {
+    width: 62%;
+    margin: 10px;
+    display: inline-block;
+    background-color: white;
+    vertical-align: top;
+    box-sizing: border-box;
+    height: 200px;
+
+
+    .card-header {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      position: relative;
+      padding: 7px 0;
+      background-color: $card-header-color;
+
+      .title {
+        width: 50%;
+        display: inline-block;
+      }
+
+      i {
+        position: absolute;
+        right: 20px;
+      }
+    }
+
+    .labels {
+      padding: 7px;
+      border-bottom: 1px solid $main-background-color;
+      .orange-square {
+        width: 12px;
+        height: 12px;
+        background-color: $main-color;
+        display: inline-block;
+      }
+
+      .gray-square {
+        width: 12px;
+        height: 12px;
+        background-color: $card-header-color;
+        display: inline-block;
+        margin-left: 20px;
+      }
+    }
+
+    .ydt-chart {
+      border-bottom: 1px solid $main-background-color;
+      box-sizing: border-box;
+
+      .ydt-label {
+        display: inline-block;
+        padding: 20px 20px;
+        width: 90px;
+        border-right: 1px solid $main-background-color;
+        box-sizing: border-box;
+      }
+
+      .ydt-graphic {
+        display: inline-block;
+        width:80%;
+        box-sizing: border-box;
+      }
+    }
+
+    .year-chart {
+      border-bottom: 1px solid $main-background-color;
+      box-sizing: border-box;
+      .year-label {
+        display: inline-block;
+        padding: 20px 20px;
+        width: 90px;
+        border-right: 1px solid $main-background-color;
+        box-sizing: border-box;
+      }
+
+      .year-graphic {
+        display: inline-block;
+        width:80%;
+        box-sizing: border-box;
+
+      }
+    }
+  }
+}
+
+.company-info {
+  p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.row2 {
+  display: inline-block;
+  width: 100%;
+
+  .risk-stratification {
+    width: 62%;
+    margin: 10px;
+    display: inline-block;
+    background-color: white;
+    vertical-align: top;
+    box-sizing: border-box;
+    height:200px;
+  }
+
+  .physician-groups {
+    width: 35%;
+    margin: 10px;
+    display: inline-block;
+    background-color: white;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+    height:200px;
+  }
+}

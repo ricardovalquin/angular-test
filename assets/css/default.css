@@ -103,6 +103,35 @@ input, select {
 /*////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////////END RESET STYLES///////////////////////////////*/
 /*////////////////////////////////////////////////////////////////////////////////////////*/
+@font-face {
+  font-family: "avenir-lt-std";
+  src: url("../fonts/avenir-lt-std/AvenirLTStd-Book.woff");
+  src: url("../fonts/avenir-lt-std/AvenirLTStd-Light.woff");
+  src: url("../fonts/avenir-lt-std/AvenirLTStd-Medium.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'avenir-lt-std';
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////END FONTS/////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////////////////*/
+.main-app-container {
+  padding-top: 70px;
+  box-sizing: border-box;
+  background-color: #dbe3e8;
+  color: #767b80;
+  width: 100%;
+  height: 100%;
+}
+
+.main-app-container .main-view {
+  margin: 30px 10%;
+}
+
 .header {
   width: 100%;
   height: 70px;
@@ -152,6 +181,151 @@ input, select {
   right: 10%;
   top: 30px;
   font-size: 12px;
+}
+
+.row1 {
+  display: inline-block;
+  width: 100%;
+}
+
+.row1 .company {
+  width: 35%;
+  margin: 10px;
+  display: inline-block;
+  background-color: white;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  height: 200px;
+  vertical-align: top;
+}
+
+.row1 .company .company-logo {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.row1 .company .company-info {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 22px;
+}
+
+.row1 .financial-summary {
+  width: 62%;
+  margin: 10px;
+  display: inline-block;
+  background-color: white;
+  vertical-align: top;
+  box-sizing: border-box;
+  height: 200px;
+}
+
+.row1 .financial-summary .card-header {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  padding: 7px 0;
+  background-color: #e7edf0;
+}
+
+.row1 .financial-summary .card-header .title {
+  width: 50%;
+  display: inline-block;
+}
+
+.row1 .financial-summary .card-header i {
+  position: absolute;
+  right: 20px;
+}
+
+.row1 .financial-summary .labels {
+  padding: 7px;
+  border-bottom: 1px solid #dbe3e8;
+}
+
+.row1 .financial-summary .labels .orange-square {
+  width: 12px;
+  height: 12px;
+  background-color: #d43b00;
+  display: inline-block;
+}
+
+.row1 .financial-summary .labels .gray-square {
+  width: 12px;
+  height: 12px;
+  background-color: #e7edf0;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.row1 .financial-summary .ydt-chart {
+  border-bottom: 1px solid #dbe3e8;
+  box-sizing: border-box;
+}
+
+.row1 .financial-summary .ydt-chart .ydt-label {
+  display: inline-block;
+  padding: 20px 20px;
+  width: 90px;
+  border-right: 1px solid #dbe3e8;
+  box-sizing: border-box;
+}
+
+.row1 .financial-summary .ydt-chart .ydt-graphic {
+  display: inline-block;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.row1 .financial-summary .year-chart {
+  border-bottom: 1px solid #dbe3e8;
+  box-sizing: border-box;
+}
+
+.row1 .financial-summary .year-chart .year-label {
+  display: inline-block;
+  padding: 20px 20px;
+  width: 90px;
+  border-right: 1px solid #dbe3e8;
+  box-sizing: border-box;
+}
+
+.row1 .financial-summary .year-chart .year-graphic {
+  display: inline-block;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.company-info p {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.row2 {
+  display: inline-block;
+  width: 100%;
+}
+
+.row2 .risk-stratification {
+  width: 62%;
+  margin: 10px;
+  display: inline-block;
+  background-color: white;
+  vertical-align: top;
+  box-sizing: border-box;
+  height: 200px;
+}
+
+.row2 .physician-groups {
+  width: 35%;
+  margin: 10px;
+  display: inline-block;
+  background-color: white;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  vertical-align: top;
+  height: 200px;
 }
 
 /*# sourceMappingURL=default.css.map */

@@ -1,3 +1,13 @@
 .main-app-container {
-  //margin-top: 70px;
+  padding-top: 70px;
+  box-sizing: border-box;
+  background-color: $main-background-color;
+  color: $main-font-color;
+  width: 100%;
+  height: 100%;
+
+  .main-view {
+    margin: 30px 10%;
+
+  }
 }

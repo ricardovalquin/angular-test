@@ -18,12 +18,18 @@ gulp.task('bower-inject', function(){
     .pipe(gulp.dest('./'))
 });
 
-gulp.task('injectAppFiles', function(){
+gulp.task('injectJsFiles', function() {
+  var target = gulp.src('./index.html');
+  return target.pipe($.inject(gulp.src(['./app/**/*.js'], {read: false}), {addRootSlash: false}))
+    .pipe(gulp.dest('./'));
+});
+
+gulp.task('injectCssFiles', function(){
   var sources = gulp.src(['./assets/css/**/*.css','./**/*.js'], {read: false});
   var target = gulp.src('./index.html');
 
-  return target.pipe($.inject(gulp.src(['./assets/css/**/*.css', './app/**/*.js'], {read: false}), {ignorePath: 'app', addRootSlash: false}))
-    .pipe(gulp.dest('./'))
+  return target.pipe($.inject(gulp.src(['./assets/css/**/*.css'], {read: false}), {ignorePath: 'app', addRootSlash: false}))
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('styles', function(){
@@ -88,7 +94,7 @@ gulp.task('js-watch', ['lint'], browserSync.reload);
 
 
 
-gulp.task('serve', ['styles', 'injectAppFiles', 'bower-inject'], function(){
+gulp.task('serve', ['styles', 'injectCssFiles', 'bower-inject', 'injectJsFiles'], function(){
   browserSync.init({
       server: './'
   });

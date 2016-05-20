@@ -106,6 +106,27 @@ input, select {
 /*/////////////////////////////////////////END RESET STYLES///////////////////////////////*/
 /*////////////////////////////////////////////////////////////////////////////////////////*/
 
+@font-face {
+	font-family: "avenir-lt-std";
+	src:url("../fonts/avenir-lt-std/AvenirLTStd-Book.woff");
+	src:url("../fonts/avenir-lt-std/AvenirLTStd-Light.woff");
+	src:url("../fonts/avenir-lt-std/AvenirLTStd-Medium.woff");
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+* {
+	font-family: 'avenir-lt-std';
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////END FONTS/////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
 //Variables declaration
 //break points
 $xs-max-width: (max-width 599px);
@@ -123,7 +144,9 @@ $header-height: 70px;
 $main-color: #d43b00;
 $main-background-color: #dbe3e8;
 $main-font-color: #767b80;
+$card-header-color: #e7edf0;
 
-@import "header";
 @import "common-styles";
+@import "header";
+@import "dashboard";
 
