@@ -1,110 +1,79 @@
 .row1 {
-  display: inline-block;
   width: 100%;
+  display: inline-block;
 
   .company {
-    width: 35%;
+    width: 450px;
     margin: 10px;
-    display: inline-block;
-    background-color: white;
-    padding: 50px 20px;
-    box-sizing: border-box;
     height: 200px;
+    padding: 30px 30px;
+    position: relative;
     vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: white;
 
     .company-logo {
       display: inline-block;
       box-sizing: border-box;
+      position: absolute;
+      top: 70%;
+      margin-top: -70px;
     }
 
     .company-info {
+      font-size: 22px;
+      position: absolute;
+      right:15%;
       display: inline-block;
       box-sizing: border-box;
-      font-size: 22px;
+
     }
   }
 
   .financial-summary {
-    width: 62%;
+    width: 60%;
     margin: 10px;
-    display: inline-block;
-    background-color: white;
-    vertical-align: top;
-    box-sizing: border-box;
     height: 200px;
-
-
-    .card-header {
-      display: inline-block;
-      text-align: center;
-      width: 100%;
-      position: relative;
-      padding: 7px 0;
-      background-color: $card-header-color;
-
-      .title {
-        width: 50%;
-        display: inline-block;
-      }
-
-      i {
-        position: absolute;
-        right: 20px;
-      }
-    }
-
-    .labels {
-      padding: 7px;
-      border-bottom: 1px solid $main-background-color;
-      .orange-square {
-        width: 12px;
-        height: 12px;
-        background-color: $main-color;
-        display: inline-block;
-      }
-
-      .gray-square {
-        width: 12px;
-        height: 12px;
-        background-color: $card-header-color;
-        display: inline-block;
-        margin-left: 20px;
-      }
-    }
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: white;
 
     .ydt-chart {
-      border-bottom: 1px solid $main-background-color;
+      height:70px;
       box-sizing: border-box;
+      border-bottom: 1px solid $main-background-color;
 
       .ydt-label {
-        display: inline-block;
-        padding: 20px 20px;
         width: 90px;
-        border-right: 1px solid $main-background-color;
+        padding: 27px 20px;
+        display: inline-block;
         box-sizing: border-box;
+        border-right: 1px solid $main-background-color;
       }
 
       .ydt-graphic {
-        display: inline-block;
         width:80%;
+        display: inline-block;
         box-sizing: border-box;
       }
     }
 
     .year-chart {
-      border-bottom: 1px solid $main-background-color;
+      height:70px;
       box-sizing: border-box;
       .year-label {
-        display: inline-block;
-        padding: 20px 20px;
         width: 90px;
-        border-right: 1px solid $main-background-color;
+        padding: 27px 20px;
+        display: inline-block;
         box-sizing: border-box;
+        border-right: 1px solid $main-background-color;
       }
 
       .year-graphic {
-        display: inline-block;
         width:80%;
+        display: inline-block;
         box-sizing: border-box;
 
       }
@@ -113,9 +82,62 @@
 }
 
 .company-info {
+  h2 {
+    color: #000;
+  }
   p {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.card-header {
+  width: 100%;
+  padding: 7px 0;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  background-color: $card-header-color;
+
+  .title {
+    width: 50%;
+    display: inline-block;
+  }
+
+  i {
+    right: 20px;
+    position: absolute;
+  }
+}
+
+.labels {
+  padding: 7px;
+  border-bottom: 1px solid $main-background-color;
+  position: relative;
+  .orange-square {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background-color: $main-color;
+  }
+
+  .gray-square {
+    width: 12px;
+    height: 12px;
+    margin-left: 20px;
+    display: inline-block;
+    background-color: $card-header-color;
+  }
+  
+  .year {
+    display: inline-block;
+    position: absolute;
+    right: 40px;
+    font-size: 22px;
+    select {
+      outline: none;
+      border: none;
+    }
   }
 }
 
@@ -124,23 +146,48 @@
   width: 100%;
 
   .risk-stratification {
-    width: 62%;
+    width: 60%;
     margin: 10px;
-    display: inline-block;
-    background-color: white;
-    vertical-align: top;
-    box-sizing: border-box;
     height:200px;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: white;
   }
 
   .physician-groups {
-    width: 35%;
+    width: 450px;
     margin: 10px;
-    display: inline-block;
-    background-color: white;
-    padding: 50px 20px;
-    box-sizing: border-box;
+    // TODO: ADJUST TO THE REAL HEIGHT WHEN THE OBJECTS ARE LOADED
+    min-height:200px;
     vertical-align: top;
-    height:200px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: white;
+
+    // TODO: THE LAST GROUP CHILD DON'T HAVE BORDER BOTTOM
+
+    .groups {
+      box-sizing: border-box;
+      border-bottom: 1px solid $main-background-color;
+
+      .group-name {
+        width: 200px;
+        height:30px;
+        font-size: 12px;
+        padding: 8px 10px 5px;
+        display: inline-block;
+        box-sizing: border-box;
+        border-right: 1px solid $main-background-color;
+      }
+
+      .group-chart {
+        width: 240px;
+        height: 30px;
+        padding: 5px 10px;
+        display: inline-block;
+        box-sizing: border-box;
+      }
+    }
   }
 }

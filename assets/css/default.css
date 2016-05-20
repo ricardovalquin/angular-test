@@ -184,122 +184,146 @@ input, select {
 }
 
 .row1 {
-  display: inline-block;
   width: 100%;
+  display: inline-block;
 }
 
 .row1 .company {
-  width: 35%;
+  width: 450px;
   margin: 10px;
-  display: inline-block;
-  background-color: white;
-  padding: 50px 20px;
-  box-sizing: border-box;
   height: 200px;
+  padding: 30px 30px;
+  position: relative;
   vertical-align: top;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: white;
 }
 
 .row1 .company .company-logo {
   display: inline-block;
   box-sizing: border-box;
+  position: absolute;
+  top: 70%;
+  margin-top: -70px;
 }
 
 .row1 .company .company-info {
+  font-size: 22px;
+  position: absolute;
+  right: 15%;
   display: inline-block;
   box-sizing: border-box;
-  font-size: 22px;
 }
 
 .row1 .financial-summary {
-  width: 62%;
+  width: 60%;
   margin: 10px;
-  display: inline-block;
-  background-color: white;
-  vertical-align: top;
-  box-sizing: border-box;
   height: 200px;
-}
-
-.row1 .financial-summary .card-header {
+  vertical-align: top;
   display: inline-block;
-  text-align: center;
-  width: 100%;
-  position: relative;
-  padding: 7px 0;
-  background-color: #e7edf0;
-}
-
-.row1 .financial-summary .card-header .title {
-  width: 50%;
-  display: inline-block;
-}
-
-.row1 .financial-summary .card-header i {
-  position: absolute;
-  right: 20px;
-}
-
-.row1 .financial-summary .labels {
-  padding: 7px;
-  border-bottom: 1px solid #dbe3e8;
-}
-
-.row1 .financial-summary .labels .orange-square {
-  width: 12px;
-  height: 12px;
-  background-color: #d43b00;
-  display: inline-block;
-}
-
-.row1 .financial-summary .labels .gray-square {
-  width: 12px;
-  height: 12px;
-  background-color: #e7edf0;
-  display: inline-block;
-  margin-left: 20px;
+  box-sizing: border-box;
+  background-color: white;
 }
 
 .row1 .financial-summary .ydt-chart {
-  border-bottom: 1px solid #dbe3e8;
+  height: 70px;
   box-sizing: border-box;
+  border-bottom: 1px solid #dbe3e8;
 }
 
 .row1 .financial-summary .ydt-chart .ydt-label {
-  display: inline-block;
-  padding: 20px 20px;
   width: 90px;
-  border-right: 1px solid #dbe3e8;
+  padding: 27px 20px;
+  display: inline-block;
   box-sizing: border-box;
+  border-right: 1px solid #dbe3e8;
 }
 
 .row1 .financial-summary .ydt-chart .ydt-graphic {
-  display: inline-block;
   width: 80%;
+  display: inline-block;
   box-sizing: border-box;
 }
 
 .row1 .financial-summary .year-chart {
-  border-bottom: 1px solid #dbe3e8;
+  height: 70px;
   box-sizing: border-box;
 }
 
 .row1 .financial-summary .year-chart .year-label {
-  display: inline-block;
-  padding: 20px 20px;
   width: 90px;
-  border-right: 1px solid #dbe3e8;
+  padding: 27px 20px;
+  display: inline-block;
   box-sizing: border-box;
+  border-right: 1px solid #dbe3e8;
 }
 
 .row1 .financial-summary .year-chart .year-graphic {
-  display: inline-block;
   width: 80%;
+  display: inline-block;
   box-sizing: border-box;
 }
 
+.company-info h2 {
+  color: #000;
+}
+
 .company-info p {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.card-header {
+  width: 100%;
+  padding: 7px 0;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  background-color: #e7edf0;
+}
+
+.card-header .title {
+  width: 50%;
+  display: inline-block;
+}
+
+.card-header i {
+  right: 20px;
+  position: absolute;
+}
+
+.labels {
+  padding: 7px;
+  border-bottom: 1px solid #dbe3e8;
+  position: relative;
+}
+
+.labels .orange-square {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background-color: #d43b00;
+}
+
+.labels .gray-square {
+  width: 12px;
+  height: 12px;
+  margin-left: 20px;
+  display: inline-block;
+  background-color: #e7edf0;
+}
+
+.labels .year {
+  display: inline-block;
+  position: absolute;
+  right: 40px;
+  font-size: 22px;
+}
+
+.labels .year select {
+  outline: none;
+  border: none;
 }
 
 .row2 {
@@ -308,24 +332,46 @@ input, select {
 }
 
 .row2 .risk-stratification {
-  width: 62%;
+  width: 60%;
   margin: 10px;
-  display: inline-block;
-  background-color: white;
-  vertical-align: top;
-  box-sizing: border-box;
   height: 200px;
+  vertical-align: top;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: white;
 }
 
 .row2 .physician-groups {
-  width: 35%;
+  width: 450px;
   margin: 10px;
-  display: inline-block;
-  background-color: white;
-  padding: 50px 20px;
-  box-sizing: border-box;
+  min-height: 200px;
   vertical-align: top;
-  height: 200px;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.row2 .physician-groups .groups {
+  box-sizing: border-box;
+  border-bottom: 1px solid #dbe3e8;
+}
+
+.row2 .physician-groups .groups .group-name {
+  width: 200px;
+  height: 30px;
+  font-size: 12px;
+  padding: 8px 10px 5px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-right: 1px solid #dbe3e8;
+}
+
+.row2 .physician-groups .groups .group-chart {
+  width: 240px;
+  height: 30px;
+  padding: 5px 10px;
+  display: inline-block;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=default.css.map */
