@@ -324,6 +324,12 @@ input, select {
 .labels .year select {
   outline: none;
   border: none;
+  height: 25px;
+  vertical-align: top;
+  width: 66px;
+  font-size: 14px;
+  top: -23px;
+  color: #767b80;
 }
 
 .row2 {

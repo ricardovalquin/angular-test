@@ -137,6 +137,12 @@
     select {
       outline: none;
       border: none;
+      height: 25px;
+      vertical-align: top;
+      width: 66px;
+      font-size: 14px;
+      top: -23px;
+      color: $main-font-color;
     }
   }
 }
