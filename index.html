@@ -1,25 +1,32 @@
-<DOCTYPE !html>
-<html ng-app="angular-test"> 
-<head>
-	<title>asdf</title>
-	<meta charset="utf-8"/>
-	<!-- bower:css -->
+<!DOCTYPE html>
+<html ng-app="angular-test">
+  <head>
+    <title>Talos AngularJS test</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+    <!-- bower:css -->
     <!-- endbower -->
 
     <!-- inject:css -->
     <link rel="stylesheet" href="assets/css/default.css">
     <!-- endinject -->
-</head>
-<body>
- <h1>ola k ase</h1>
+  </head>
+    <body>
+      <h1>ola k ase</h1>
+      <section class="header">
 
+      </section>
+      <div class="main-view" ui-view="content"></div>
 
-  <!-- bower:js -->
+        <!-- bower:js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <!-- endinject -->
+        <script src="app.js"></script>
 
-  <!-- endbower -->
-
-  <!-- inject:js -->
-
-  <!-- endinject -->
-</body>
+    </body>
+</html>
+    </body>
 </html>

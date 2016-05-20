@@ -1,0 +1,21 @@
+{
+  "name": "angular-test",
+  "description": "an angular application test using Highcharts for the graphics and angular mocks for emulate the services responses",
+  "main": "index.js",
+  "authors": [
+    "ricardovalquin"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ricardovalquin/angular-test",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.3.0"
+  }
+}
