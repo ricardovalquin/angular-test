@@ -1,0 +1,51 @@
+.header {
+  width: 100%;
+  height: $header-height;
+  position: fixed;
+  background-color: $main-color;
+  color: white;
+
+  .header-inner{
+    position: relative;
+    height: 100%;
+
+    .logo {
+      margin-left: 10%;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    .account {
+      display: inline-block;
+      position: absolute;
+      right: 15%;
+      width:120px;
+
+      .profile-img{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: 15px;
+      }
+
+      .user-name {
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 30px;
+        font-size: 12px;
+      }
+    }
+
+    .nav {
+      display: inline-block;
+      position: absolute;
+      right: 10%;
+      top: 30px;
+      font-size: 12px;
+    }
+
+  }
+}
