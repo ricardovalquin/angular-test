@@ -11,10 +11,10 @@ angularTest.config(function ($stateProvider, $urlRouterProvider) {
 
   .state('home', {
     url: '/home',
-    templateUrl: '/app/components/dashboard/dashboard.html'
+    templateUrl: 'components/dashboard/dashboard.html'
   })
   .state('profile', {
     url: '/profile',
-    templateUrl: '/app/components/profile/profile.html'
+    templateUrl: 'components/profile/profile.html'
   });
 });

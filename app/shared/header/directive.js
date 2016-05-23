@@ -5,6 +5,6 @@ angular.module('angularTest')
     return {
       restrict: 'E',
       replace: true,
-      templateUrl: 'app/shared/header/header.html'
+      templateUrl: 'shared/header/header.html'
     };
 });
